@@ -1,0 +1,11 @@
+vm:
+  memory: 1536
+  cpus: 1
+  name: calambur_shop
+system:
+  swapsize: 1024
+  timezone: UTC
+network:
+  ip: 192.168.33.10
+github:
+  token: <your-github-api-token>
