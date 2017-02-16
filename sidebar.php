@@ -31,6 +31,58 @@
 		<li>
 			<a href="#">Contact</a>
 		</li>
+		<li>
+			<ul>Вид изделия:
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>Сезон:
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>Ссостав:
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul>Тип ткани:
+				<li>
+					<label for=""><input type="radio" name="cloth" value="">asdasd</label>
+				</li>
+				<li>
+					<label for=""><input type="radio" name="cloth" value="">asdasd</label>
+				</li>
+				<li>
+					<label for=""><input type="radio" name="cloth" value="">asdasd</label> 
+				</li>
+			</ul>
+		</li>
 	</ul>
 </div>
 </section>
