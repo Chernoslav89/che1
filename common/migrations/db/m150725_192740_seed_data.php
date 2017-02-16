@@ -107,7 +107,7 @@ class m150725_192740_seed_data extends Migration
             'carousel_id'=>1,
             'base_url' => Yii::getAlias('@frontendUrl'),
             'path'=>'img/DSC_5371.jpeg',
-            'type'=>'image/jpg',
+            'type'=>'image/jpeg',
             'url'=>'/',
             'status'=>1
         ]);
