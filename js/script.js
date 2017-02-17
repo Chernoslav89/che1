@@ -9,6 +9,10 @@ $(function() {
 		$(this).hide();
 		$('.popupLogIn').slideUp(300);
 	});
+
+	$('.dropMenu').on('click', function(){
+		$(this).next('.podMenu').slideToggle(400);
+	});
 //================ END POPUP WINDOW FOR LOG IN
 
 })

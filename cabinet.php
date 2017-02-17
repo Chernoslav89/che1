@@ -7,7 +7,7 @@
                 <div class="col-xs-10">
                       <ul class="userInfo">
                         <li><img src="img/avatar-user.png" alt="Ваш аватар" title="Ваш аватар"></li>
-                        <li class="infoString"><span>Ваше им'я: </span>Василь Василька Васильович <a class="iconReg glyphicon glyphicon-pencil"></a></li>
+                        <li class="infoString"><span>Ваше им0'я: </span>Василь Василька Васильович <a class="iconReg glyphicon glyphicon-pencil"></a></li>
                         <li class="infoString"><span>e-mail: </span>lalala@gmail.com <a class="iconReg glyphicon glyphicon-pencil"></a></li>
                         <li class="infoString"><span>Телефон: </span>+ 380 11-22-33-999 <a class="iconReg glyphicon glyphicon-pencil"></a></li>
                         <li class="infoString"><span>Адреса доставки: </span>м. Хмельницький <a class="iconReg glyphicon glyphicon-pencil"></a></li>

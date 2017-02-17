@@ -12,7 +12,7 @@
 						<div class="col-sm-12 col-lg-6">
 							<img src="img/futbolka.jpg" width="350px"> 	 <!--width="350"-->
 						</div>
-                        
+
                     <div class="col-sm-12 col-lg-6">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                       <!-- Indicators -->
@@ -56,9 +56,9 @@
                       </a>
                     </div>
                         </div>
-                        
+
                         <div class="col-xs-10">
-                        
+
                         <div class="caption">
                             <h2 class="price">Price:<label type="">{}</label> grn </h2>
                             <input type="text" value="1">

@@ -2,6 +2,11 @@ figure div img{
 	max-width:100%;
 	margin:0 auto;
 }
+.rasp:after{
+	content:'';
+	display:block;
+	clear:both;
+}
 .avatarProduct:hover{
 	cursor:pointer;
 	box-shadow:0 0 7px 3px rgba(70, 115, 227, 0.7);
@@ -145,6 +150,7 @@ body {
 	width: 0;
 	height: 100%;
 	margin-left: -250px;
+	padding-bottom:50px;
 	overflow-y: auto;
 	background:rgba(70, 115, 227, 0.7);
 	-webkit-transition: all 0.5s ease;
@@ -170,7 +176,7 @@ body {
 /* Sidebar Styles */
 
 .sidebar-nav {
-	position: absolute;
+	padding-bottom:50px;
 	width: 250px;
 	margin: 0;
 	padding: 0;
@@ -188,7 +194,8 @@ body {
 	color: white;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li a:hover, .dropMenu a:hover {
+	cursor:pointer;
 	text-decoration: none;
 	color: #fff;
 	background: rgba(255,255,255,0.2);
@@ -394,3 +401,48 @@ body {
 }
 /*slider*/
 /*style for product end*/
+.sideList{
+	color:#fff;
+}
+.dropMenu:hover{
+
+}
+.podMenu{
+	display:none;
+	padding-bottom:10px;
+	background:rgba(90, 115, 227, 0.7);
+}
+.podMenu li label{
+	display:block;
+	color:#fff;
+}
+.podMenu li label a{
+	float:left;
+}
+.podMenu li label a:hover{
+	background:none;
+}
+.podMenu li label:hover{
+	cursor:pointer;
+		background: rgba(255,255,255,0.2);
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.price .inputPrice{
+	float:left;
+	width:50%;
+}
+.price .inputPrice input{
+	font-size:14px;
+	width:80%;
+	height:30px;
+	color:dodgerblue;
+	overflow:hidden;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
