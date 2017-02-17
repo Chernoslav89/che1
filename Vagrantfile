@@ -33,7 +33,7 @@ packages = [
 ]
 
 Vagrant.configure(2) do |config|
-  config.vm.post_up_message = "Done! Now you can access site at http://calambur_shop.dev"
+  config.vm.post_up_message = "Done! Now you can access site at http://calambur-shop.dev"
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
     vb.memory = options['vm']['memory']
