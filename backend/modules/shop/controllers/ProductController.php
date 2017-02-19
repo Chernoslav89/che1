@@ -22,15 +22,7 @@ class ProductController extends BackendCrudController
     {
         $output = parent::behaviors();
         //$output['verbs']['actions']['logout'] = ['post'];
-        $output['access']['rules'] = [
-            [
-                'allow' => true,
-                'roles' => ['manager'],
-            ],
-            [
-                'allow' => false,
-            ],
-        ];
+
         return $output;
     }
 

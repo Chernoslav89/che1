@@ -120,11 +120,7 @@ class BackendCrudController extends BackendController
         /** @var \yii\db\ActiveRecord $model */
         $model = $this->model;
         if ($model !== null && ($model = $model::findOne($condition)) !== null) {
-            if (Yii::$app->user->can('location', ['model' => $model]) || Yii::$app->user->can('admin')) {
-                return $model;
-            } else {
-                throw new ForbiddenHttpException();
-            }
+            return $model;
         } else {
             throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
         }
@@ -143,8 +139,9 @@ class BackendCrudController extends BackendController
      * @param array $parameters
      * @return bool
      */
-    protected function loadAttributes($model, $parameters){
-        if($model->load($parameters)){
+    protected function loadAttributes($model, $parameters)
+    {
+        if ($model->load($parameters)) {
             return true;
         }
         return false;
