@@ -154,6 +154,19 @@ $bundle = BackendAsset::register($this);
                             ]
                         ],
                         [
+                            'label' => Yii::t('app', 'Shop'),
+                            'url' => '#',
+                            'icon' => '<i class="fa fa-folder"></i>',
+                            'options' => ['class' => 'treeview'],
+                            'items' => [
+                                ['label' => Yii::t('common/model_labels', 'Products'), 'url' => ['/shop/product/index']],
+                                ['label' => Yii::t('common/model_labels', 'Attributes'), 'url' => ['/shop/attribute/index']],
+                                ['label' => Yii::t('common/model_labels', 'Categories'), 'url' => ['/shop/category/index']],
+                                ['label' => Yii::t('common/model_labels', 'Orders'), 'url' => ['/shop/order/index']],
+                            ],
+                            'permission' => 'manager',
+                        ],
+                        [
                             'label'=>Yii::t('backend', 'System'),
                             'options' => ['class' => 'header']
                         ],
