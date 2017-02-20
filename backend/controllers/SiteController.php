@@ -1,14 +1,19 @@
 <?php
 namespace backend\controllers;
 
+use backend\components\BackendController;
 use common\components\keyStorage\FormModel;
 use Yii;
+use common\models\Album;
+use common\models\Product;
+use zxbodya\yii2\galleryManager\GalleryManagerAction;
 
 /**
  * Site controller
  */
-class SiteController extends \yii\web\Controller
+class SiteController extends BackendController
 {
+	
     /**
      * @inheritdoc
      */
@@ -17,14 +22,66 @@ class SiteController extends \yii\web\Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-            ]
+            ],
+            'galleryApi' => [
+                'class' => GalleryManagerAction::className(),
+                // mappings between type names and model classes (should be the same as in behaviour)
+                'types' => [
+                    Product::className() => Product::className(),
+                    Album::className() => Album::className(),
+                ]
+            ],
         ];
     }
+    
+     /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        $output = parent::behaviors();
+
+        $output['verbs']['actions']['logout'] = ['post'];
+        array_unshift(
+            $output['access']['rules'],
+            [
+                'actions' => ['login',],
+                'allow' => true,
+            ],
+            [
+                'actions' => ['error', 'logout', 'index', 'galleryApi', 'profile', 'filesystem',],
+                'allow' => true,
+                'roles' => ['@'],
+            ]
+        );
+        return $output;
+    }
+
 
     public function beforeAction($action)
     {
         $this->layout = Yii::$app->user->isGuest || !Yii::$app->user->can('loginToBackend') ? 'base' : 'common';
         return parent::beforeAction($action);
+    }
+
+
+    public function actionFilesystem()
+    {
+        $this->view->title = Yii::t('app', 'Filesystem');
+        $this->view->registerJs(<<<JS
+    function elfinder_resize(){
+        $('.elfinder-wrapper').height($('.content-wrapper').height() - $('.content-header').height()  - $('.main-footer').height()- 70);
+    }
+    $('.elfinder-wrapper').load(elfinder_resize);
+    $(window).resize(elfinder_resize);
+JS
+);
+        return $this->renderContent(\mihaildev\elfinder\ElFinder::widget([
+            'controller' => 'elfinder',
+            'callbackFunction' => new \yii\web\JsExpression('function(file, id){}'), // id - id виджета
+            'containerOptions' => [],
+            'frameOptions' => ['class' => 'elfinder-wrapper',],
+        ]));
     }
 
     public function actionSettings()
